@@ -21,20 +21,28 @@
   box-sizing: border-box;
 }
 
+body,
+html {
+  height: 100%;
+}
+
 body {
   background-color: var(--light-pink);
   font-family: workSansVariable;
   font-size: 16px;
 }
 
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+
 /* FOOTER CSS */
 .attribution {
   font-size: 11px;
   text-align: center;
-  position: absolute;
-  bottom: 0px;
-  margin-bottom: 10px;
   width: 100%;
+  height: 2.5rem;
 }
 
 .attribution a {
@@ -44,9 +52,10 @@ body {
 
 /* MAIN CSS*/
 main {
-  height: auto;
+  padding-bottom: 2.5rem;
   display: flex;
   justify-content: center;
+  min-height: 100vh;
 }
 
 main .header-img {
