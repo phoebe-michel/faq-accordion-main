@@ -72,10 +72,11 @@ main .header-img {
   position: absolute;
   top: 150px;
   margin: 0px 25px 20px;
-  padding: 25px 22px 0;
+  padding: 25px 22px 15px;
   border-radius: 8px;
   height: auto;
-  max-width: 600px;
+  max-width: 550px;
+  box-shadow: 2px 7px 33px 12px rgba(140, 105, 145, 0.22);
 }
 
 .faq-heading {
@@ -92,7 +93,7 @@ main .header-img {
 }
 
 h1 span {
-  margin-left: 20px;
+  margin-left: 11px;
 }
 /** end faq accordion container css */
 
@@ -174,7 +175,7 @@ h1 span {
 
   /** start faq accordion container css */
   .faq-accordion-container {
-    padding: 30px 30px 0;
+    padding: 30px 30px 15px;
   }
 
   .icon-star {
