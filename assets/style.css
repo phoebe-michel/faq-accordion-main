@@ -1,0 +1,184 @@
+:root {
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+  --pinkish-purple: hsl(281, 83%, 54%);
+}
+
+@font-face {
+  font-family: workSansVariable;
+  src: url("./fonts/WorkSans-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: workSansItalic;
+  src: url("./fonts/WorkSans-Italic-VariableFont_wght.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-pink);
+  font-family: workSansVariable;
+  font-size: 16px;
+}
+
+/* FOOTER CSS */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* END FOOTER CSS */
+
+/* MAIN CSS*/
+main {
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+main .header-img {
+  height: 235px;
+  width: 100vw;
+  background: url("./images/background-pattern-mobile.svg");
+}
+
+/* END MAIN CSS */
+
+/** start faq accordion container css */
+.faq-accordion-container {
+  background-color: white;
+  position: absolute;
+  top: 150px;
+  margin: 0px 25px 20px;
+  padding: 25px 22px 0;
+  border-radius: 8px;
+  height: auto;
+  max-width: 600px;
+}
+
+.faq-heading {
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: var(--dark-purple);
+}
+
+.icon-star {
+  content: url("./images/icon-star.svg");
+  height: 25px;
+}
+
+h1 span {
+  margin-left: 20px;
+}
+/** end faq accordion container css */
+
+/* START ACCORDION CSS */
+.accordion {
+  border-bottom: 1px solid lightgray;
+}
+
+.accordion:last-child {
+  border: none;
+}
+
+/* END ACCORDION CSS */
+
+/* START ACCORDION BTN CSS */
+.accordion-btn {
+  background: none;
+  border: none;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.accordion-btn span {
+  font-size: 16px;
+  color: var(--dark-purple);
+  font-weight: 600;
+  margin-right: 30px;
+}
+
+.accordion-btn span:hover {
+  color: var(--pinkish-purple);
+  cursor: pointer;
+  caret-color: black;
+}
+
+.accordion-btn .accordion-icon {
+  content: url("./images/icon-plus.svg");
+  height: 35px;
+}
+
+.accordion-btn .accordion-icon.active {
+  content: url("./images/icon-minus.svg");
+}
+
+/* START ACCORDION BTN CSS */
+
+/* START ACCORDION PANEL CSS */
+.accordion .panel {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.accordion .panel.active {
+  padding-bottom: 30px;
+  max-height: 150px;
+  transition: max-height 0.3s ease;
+  line-height: 1.4;
+  color: var(--grayish-purple);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* END ACCORDION PANEL CSS */
+
+@media screen and (min-width: 600px) {
+  /* MAIN CSS*/
+
+  main .header-img {
+    height: 235px;
+    width: 100vw;
+    background: url("./images/background-pattern-desktop.svg");
+  }
+
+  /* END MAIN CSS */
+
+  /** start faq accordion container css */
+  .faq-accordion-container {
+    padding: 30px 30px 0;
+  }
+
+  .icon-star {
+    content: url("./images/icon-star.svg");
+    height: 36px;
+  }
+
+  /** end faq accordion container css */
+
+  /* START ACCORDION PANEL CSS */
+  .accordion .panel.active {
+    font-size: 16px;
+  }
+
+  /* END ACCORDION PANEL CSS */
+}
